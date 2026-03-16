@@ -27,8 +27,8 @@ package ch.andre601.advancedserverlist.core.interfaces.commands;
 
 public interface CmdSender {
 
-    String prefix = "<grey>[<gradient:aqua:white>AdvancedServerList</gradient>] ";
-    String errorPrefix = "<grey>[<gradient:dark_red:red>AdvancedServerList</gradient>] ";
+    String prefix = "<grey>[<gradient:aqua:white>AdvancedServerList-OG</gradient>] ";
+    String errorPrefix = "<grey>[<gradient:dark_red:red>AdvancedServerList-OG</gradient>] ";
 
     boolean hasPermission(String permission);
 

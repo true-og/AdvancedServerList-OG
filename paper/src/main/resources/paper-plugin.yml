@@ -1,4 +1,4 @@
-name: 'AdvancedServerList'
+name: 'AdvancedServerList-OG'
 author: 'Andre_601'
 version: '${version}'
 description: '${description}'
@@ -23,7 +23,7 @@ dependencies:
 # The below stuff is NOT used by Paper plugin.
 commands:
   advancedserverlist:
-    description: 'Main command of AdvancedServerList'
+    description: 'Main command of AdvancedServerList-OG'
     usage: '/<command> [help|reload]'
     aliases:
       - 'asl'

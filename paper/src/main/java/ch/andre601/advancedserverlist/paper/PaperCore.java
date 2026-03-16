@@ -33,8 +33,6 @@ import ch.andre601.advancedserverlist.paper.commands.CmdAdvancedServerList;
 import ch.andre601.advancedserverlist.paper.listeners.LoadEvent;
 import ch.andre601.advancedserverlist.paper.logging.PaperLogger;
 import ch.andre601.advancedserverlist.paper.objects.WorldCache;
-import ch.andre601.advancedserverlist.paper.objects.placeholders.PaperPlayerPlaceholders;
-import ch.andre601.advancedserverlist.paper.objects.placeholders.PaperServerPlaceholders;
 import java.nio.file.Path;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -62,7 +60,7 @@ public class PaperCore extends JavaPlugin implements PluginCore<CachedServerIcon
             }
         }
 
-        this.core = AdvancedServerList.init(this, new PaperPlayerPlaceholders(), new PaperServerPlaceholders());
+        this.core = AdvancedServerList.init(this);
     }
 
     @Override

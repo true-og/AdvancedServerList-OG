@@ -2,7 +2,7 @@
 # This file is kept for Folia support.
 #
 
-name: 'AdvancedServerList'
+name: 'AdvancedServerList-OG'
 author: 'Andre_601'
 version: '${version}'
 description: 'Customize your MOTD'
@@ -23,8 +23,8 @@ softdepend:
 
 commands:
   advancedserverlist:
-    description: 'Main command of AdvancedServerList'
-    usage: '/<command> [help|reload|clearCache]'
+    description: 'Main command of AdvancedServerList-OG'
+    usage: '/<command> [help|reload]'
     aliases:
       - 'asl'
     permission: 'advancedserverlist.admin'
@@ -51,7 +51,4 @@ permissions:
     default: op
   advancedserverlist.command.reload:
     description: 'Grants access to /asl reload'
-    default: op
-  advancedserverlist.command.clearcache:
-    description: 'Clears the Player and Favicon cache'
     default: op

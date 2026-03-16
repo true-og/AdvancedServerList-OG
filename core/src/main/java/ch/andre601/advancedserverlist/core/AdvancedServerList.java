@@ -96,9 +96,6 @@ public class AdvancedServerList<F> {
     }
 
     public void disable() {
-        getPlugin().getPluginLogger().info("Saving playercache.json file...");
-        getPlayerHandler().save();
-
         if (updateChecker != null) {
             getPlugin().getPluginLogger().info("Disabling Update Checker...");
             updateChecker.disable();
@@ -111,9 +108,6 @@ public class AdvancedServerList<F> {
         plugin.clearFaviconCache();
     }
 
-    public void clearPlayerCache() {
-        getPlayerHandler().clearCache();
-    }
 
     private void load() {
         printBanner();
@@ -155,7 +149,7 @@ public class AdvancedServerList<F> {
         plugin.loadEvents();
         getPlugin().getPluginLogger().info("Events loaded!");
 
-        getPlugin().getPluginLogger().info("Loading playercache.json...");
+        getPlugin().getPluginLogger().info("Loading live player handling...");
         getPlayerHandler().load();
 
         getPlugin().getPluginLogger().info("AdvancedServerList is ready!");
