@@ -108,7 +108,6 @@ public class AdvancedServerList<F> {
         plugin.clearFaviconCache();
     }
 
-
     private void load() {
         printBanner();
         resolveVersion();

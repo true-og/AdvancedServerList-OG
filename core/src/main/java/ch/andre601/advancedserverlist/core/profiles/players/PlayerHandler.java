@@ -66,5 +66,4 @@ public class PlayerHandler {
 
         return (defaultPlayer = new CachedPlayer("0.0.0.0", "Anonymous", defaultUUID));
     }
-
 }
