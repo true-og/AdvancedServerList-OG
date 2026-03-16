@@ -22,7 +22,7 @@
   ~ SOFTWARE.
 */
 
-rootProject.name = "AdvancedServerList"
+rootProject.name = "AdvancedServerList-OG"
 include(":core", ":paper")
 dependencyResolutionManagement {
 	repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)

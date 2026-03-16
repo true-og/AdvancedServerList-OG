@@ -38,7 +38,6 @@ public class CommandHandler {
     public CommandHandler(AdvancedServerList<?> core) {
         subCommands.add(new Help());
         subCommands.add(new Reload(core));
-        subCommands.add(new ClearCache(core));
     }
 
     public void handle(CmdSender sender, String[] args) {
@@ -78,8 +77,6 @@ public class CommandHandler {
             sender.sendMsg("<aqua>/asl <white>help <grey>- Shows this help");
             sender.sendMsg();
             sender.sendMsg("<aqua>/asl <white>reload <grey>- Reloads the config.yml and profiles");
-            sender.sendMsg();
-            sender.sendMsg("<aqua>/asl <white>clearCache <grey>- Clears the Player and Favicon cache");
         }
     }
 
@@ -112,30 +109,6 @@ public class CommandHandler {
             }
 
             sender.sendPrefixedMsg("<green>Reload complete!");
-        }
-    }
-
-    private static class ClearCache extends PluginCommand {
-
-        private final AdvancedServerList<?> core;
-
-        public ClearCache(AdvancedServerList<?> core) {
-            super("clearCache");
-
-            this.core = core;
-        }
-
-        @Override
-        public void handle(CmdSender sender) {
-            sender.sendPrefixedMsg("Clearing caches...");
-
-            core.clearFaviconCache();
-            sender.sendPrefixedMsg("<green>Successfully cleared Favicon Cache!");
-
-            core.clearPlayerCache();
-            sender.sendPrefixedMsg("<green>Successfully cleared Player Cache!");
-
-            sender.sendPrefixedMsg("<green>Cache clearing complete!");
         }
     }
 }

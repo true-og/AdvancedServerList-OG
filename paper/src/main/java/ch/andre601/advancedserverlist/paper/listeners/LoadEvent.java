@@ -42,7 +42,6 @@ public class LoadEvent implements Listener {
 
     @EventHandler
     public void onLoad(ServerLoadEvent event) {
-        new JoinEvent(plugin);
         new PingEvent(plugin);
         new WorldEvents(plugin);
 

@@ -39,7 +39,7 @@ public class CmdAdvancedServerList extends Command {
         super(
                 "advancedserverlist",
                 "Main command of the plugin",
-                "/asl [reload|help|clearCache]",
+                "/asl [reload|help]",
                 Collections.singletonList("asl"));
         this.plugin = plugin;
     }

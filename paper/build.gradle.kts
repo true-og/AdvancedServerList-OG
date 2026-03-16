@@ -27,14 +27,13 @@ dependencies {
     implementation(project(":core"))
     implementation("ch.andre601.asl-api:platform-bukkit:3.2.0")
     compileOnly("io.papermc.paper:paper-api:1.19.4-R0.1-SNAPSHOT")
-    compileOnly("me.clip:placeholderapi:2.11.5")
     compileOnly("com.viaversion:viaversion-api:4.9.2")
 }
 
 tasks.withType<JavaCompile>().configureEach { dependsOn(project(":core").tasks.named("jar")) }
 
 tasks.shadowJar {
-    archiveBaseName.set("AdvancedServerList")
+    archiveBaseName.set("AdvancedServerList-OG")
     archiveClassifier.set("")
     destinationDirectory.set(rootProject.layout.buildDirectory.dir("libs"))
     relocate("org.bstats", "ch.andre601.advancedserverlist.spigot.depends.bstats")
