@@ -53,6 +53,7 @@ public class FileHandler {
 
     private final Path config;
     private final Path profilesFolder;
+    private final Path faviconsFolder;
 
     private final List<ServerListProfile> profiles = new ArrayList<>();
 
@@ -64,6 +65,7 @@ public class FileHandler {
 
         this.config = core.getPlugin().getFolderPath().resolve("config.yml");
         this.profilesFolder = core.getPlugin().getFolderPath().resolve("profiles");
+        this.faviconsFolder = core.getPlugin().getFolderPath().resolve("favicons");
     }
 
     public List<ServerListProfile> getProfiles() {
@@ -115,6 +117,32 @@ public class FileHandler {
         }
 
         return reloadProfiles();
+    }
+
+    public boolean loadFavicons() {
+        logger.info("Loading favicons...");
+        if (!faviconsFolder.toFile().exists() && faviconsFolder.toFile().mkdirs()) {
+            logger.info("Successfully created favicons folder.");
+        }
+
+        Path serverIcon = faviconsFolder.resolve("server-icon.png");
+        if (serverIcon.toFile().exists()) {
+            return true;
+        }
+
+        try (InputStream stream = plugin.getClass().getResourceAsStream("/favicons/server-icon.png")) {
+            if (stream == null) {
+                logger.warn("Cannot retrieve server-icon.png from Plugin.");
+                return false;
+            }
+
+            Files.copy(stream, serverIcon);
+            logger.info("Created default server-icon.png in favicons folder.");
+            return true;
+        } catch (IOException ex) {
+            logger.warn("Cannot create server-icon.png for plugin.", ex);
+            return false;
+        }
     }
 
     public boolean migrateConfig() {
