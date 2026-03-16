@@ -1,6 +1,6 @@
 # AdvancedServerList-OG
 
-AdvancedServerList-OG is the TrueOG-maintained variant of AdvancedServerList for Purpur 1.19.4.
+AdvancedServerList-OG is the TrueOG-maintained variant of [AdvancedServerList](https://codeberg.org/Andre601/AdvancedServerList) for Purpur 1.19.4.
 
 ## What is different from normal AdvancedServerList?
 
