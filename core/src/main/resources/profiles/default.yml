@@ -61,7 +61,7 @@ priority: 1
 # Read more: https://asl.andre601.ch/profiles/#motd
 #
 motd:
-  - '<bold><green>True<red>OG</bold> <yellow>Network</yellow>  <rainbow>1.19 BETA 2</rainbow>  <gold>[<bold>1.8.0</bold>-<bold>1.21.11</bold>]'
+  - '<bold><green>True<red>OG</bold> <yellow>Network</yellow>    <rainbow>1.19.4 BETA 2</rainbow>    <gold>[<bold>1.8.0</bold>-<bold>1.21.11</bold>]'
   - '<dark_aqua>SMP <dark_red>♥ <red>Duels <dark_red>♥ <light_purple>Splegg <dark_red>♥ <dark_purple>The Herobrine <dark_red>♥ <dark_green>Build Battle'
 
 #
